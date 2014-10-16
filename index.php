@@ -137,7 +137,8 @@ $(document).ready(function(){
   }
   $('.btn btn-primary').on('click',function(){
     var cookie = JSON.parse($.cookie('sampling_map'));
-    	
+    var cookie.geos[cookie.geos.length]={"lat":$('#lat').val(),"long":$('#lon').val()}; 	
+    $.cookie('sampling_map',JSON_stringify(cookie));
   });	
 });
 
