@@ -1,4 +1,4 @@
-<img src="http://infcosta.pt/sampling_map/assets/img/header.png" width="400px"/>
+<img src="http://www.infocosta.pt/sampling_map/assets/img/header.png" width="400px"/>
 Sampling_map
 ============
 
