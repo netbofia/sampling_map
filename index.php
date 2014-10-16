@@ -134,7 +134,11 @@ $(document).ready(function(){
   if( $.cookie('sampling_map')==null){
 	$.cookie('sampling_map', '{"name":"unknown","geos":[{"lat":0,"long":0}]}', { expires: 7, path: '/', domain: 'infocosta.pt',secure: false, json: true });
 	
-  }	
+  }
+  $('.btn btn-primary').on('click',function(){
+    var cookie = JSON.parse($.cookie('sampling_map'));
+    	
+  });	
 });
 
 
