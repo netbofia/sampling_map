@@ -8,11 +8,17 @@ body {
 }
 .logo{
 
-background-image: url('../assets/img/favicon.gif');
-width: 47px;
-height: 47px;
-background-size: cover;
-padding: 0px;
-margin: -13px;
-margin-left: 5px;	
+	background-image: url('../assets/img/favicon.gif');
+	width: 47px;
+	height: 47px;
+	background-size: cover;
+	padding: 0px;
+	margin: -13px;
+	margin-left: 5px;	
+
+}
+
+#data{
+	position: absolute;
+	top: 10px;
 }

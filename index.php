@@ -54,8 +54,8 @@ session_start();
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
+        <li class="active"><a href="#chartdiv" role="tab" data-toggle="tab">Map</a></li>
+        <li><a href="#data" role="tab" data-toggle="tab">Data</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
@@ -82,8 +82,35 @@ session_start();
 <div class="fluid-row">
 	<!-- world-mapp -->
 	<div class="col-md-8" style="height: 500px;">
-		<div class="thumbnail" id="chartdiv"></div>
+		<div class="tab-pane fade active in thumbnail" id="chartdiv"></div>
+		<div class="tab-pane fade" id="data">
+			<div class="panel panel-primary">
+  				<div class="panel-heading">
+    					<h3 class="panel-title">Data input</h3>
+  				</div>
+  				<div class="panel-body">
+    
+					<div class="input-group">
+  						<span class="input-group-addon">Latitude N</span>
+						<div class="input-group-btn">
+					 	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">N<span class="caret"></span></button>
+        				 	<ul class="dropdown-menu" role="menu">
+          				  	<li><a href="#">N</a></li>
+          				  	<li><a href="#">S</a></li>
+        				 	</ul>
+      						</div><!-- /btn-group -->
+						<input type="text" id="lat" class="form-control">
+						<span class="input-group-addon">Longitude W</span>
+						<input type="text" id="lon" class="form-control">
+			      			<span class="input-group-btn">
+        					<button class="btn btn-primary" type="button">Add!</button>
+      						</span>		
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
+
 	<!-- Samples -->
 	<div class="col-md-4" style="height:500px; overflow:auto;">
 		<h3>Current Samples</h3>
@@ -101,6 +128,17 @@ session_start();
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <!-- Jquery Cycle-->
 <script type="text/javascript" src="//cdn.jsdelivr.net/cycle/3.0.2/jquery.cycle.all.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  if( $.cookie('sampling_map')==null){
+	$.cookie('sampling_map', '{"name":"unknown","geos":[{"lat":0,"long":0}]}', { expires: 7, path: '/', domain: 'infocosta.pt',secure: false, json: true });
+	
+  }	
+});
+
+
+</script>
 <link rel="stylesheet" type="text/css" href="css/main.css">
 </body>
 </html>
