@@ -18,7 +18,7 @@ Add description to points, pics(?), notes, group by coutry, city, type, sample s
 
 Create pie charts on the sampling points.
 
-Saves data to a cookie on your machine no data is stored on our servers.
+Saves data to a cookie on your machine - no data is stored on our servers.
 Data can be saved in a config file to process on another computer.
 
 Export map as pdf
@@ -27,10 +27,10 @@ Export map as jpg
 Can be run locally on your browser. Only dependency is internet for JQuery, Bootstrap, map images and other things.
 
 
-No flash..
+No flash...!
 Personal area for cloud storage (Data only no pics)
-Add location from your phone to an online area
-import points from googlemaps.
+Add location from your phone to an online area.
+Import points from googlemaps.
 
 
 Location
@@ -42,11 +42,11 @@ Will be moved to other location soon.
 
 If this tools is useful please cite as so.
 
-Costa, B+;Martins,FP; COBIG2, CE3BC, FC UL. (Something like that...)
+Costa, B; Pina-Martins, F; CoBiG², CE3C, FCUL. (Something like that...)
 
 Bugs
-===
+====
 
-Pretty much nothing is working..... For now.
+Pretty much nothing is working..... For now. But you just wait!
 
 
