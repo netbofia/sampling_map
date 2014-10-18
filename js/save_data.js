@@ -7,7 +7,7 @@ $(document).ready(function(){
     var cookie = $.dough('sampling_map');
     for ( var i in cookie.geos ){
       cookie.geos[i];
-      $('table.samples').append('<tr><td>'+cookie.geos[i].lat+'</td></tr>');
+      $('table.samples').append('<tr><td><span class="badge">N'+cookie.geos[i].lat+"W"+cookie.geos[i].long+'</span></td></tr>');
     };
   }
   $('.btn.btn-primary#add').on('click',function(){
@@ -18,7 +18,7 @@ $(document).ready(function(){
     $('table.samples').empty();
     for ( var i in cookie.geos ){
       cookie.geos[i];
-      $('table.samples').append('<tr><td>'+cookie.geos[i].lat+'</td></tr>');
+      $('table.samples').append('<tr><td><span class="badge">N'+cookie.geos[i].lat+'W'+cookie.geos[i].long+'</span></td></tr>');
     };
     L.circle([cookie.geos[cookie.geos.length-1].lat,cookie.geos[cookie.geos.length-1].long],3000).addTo($map);
   });   
