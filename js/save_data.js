@@ -20,6 +20,18 @@ $(document).ready(function(){
       cookie.geos[i];
       $('table.samples').append('<tr><td>'+cookie.geos[i].lat+'</td></tr>');
     };
-    console.log('Button pressed!');
+    L.circle([cookie.geos[cookie.geos.length-1].lat,cookie.geos[cookie.geos.length-1].long],3000).addTo($map);
   });   
+  $('button#clear').on('click',function(){
+    $('div.alert#delete_data').removeClass('hide');
+  });
+  $('#delete_data #confirm').on('click',function(){
+    console.log("cofirmed");
+    $.dough('sampling_map','remove',{ expires: 7, path: "current", domain: "auto", secure: false });
+    $.dough('sampling_map', '{"name":"unknown","geos":[]}',{ expires: 7, path: "current", domain: "auto", secure: false });
+    $('table.samples').empty();
+    //clear map data [to do!]
+
+    $('div.alert#delete_data').addClass('hide');
+  });
 });
