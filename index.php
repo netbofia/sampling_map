@@ -117,12 +117,12 @@ session_start();
 		</table>
 	</div>
 </div>
-<script type="text/javascript" src="assets/map/ammap.js"></script>
+<!--<script type="text/javascript" src="assets/map/ammap.js"></script>
 <script type="text/javascript" src="assets/map/worldLow.js"></script>
-<script type="text/javascript" src="assets/map/dark.js"></script>
+<script type="text/javascript" src="assets/map/dark.js"></script>-->
 <!-- Jquery -->
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-<script type="text/javascript" src="assets/map/mapconfig.js"></script>
+<!--<script type="text/javascript" src="assets/map/mapconfig.js"></script>-->
 <!-- Latest compiled and minified JavaScript -->
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <!-- Jquery Cycle-->
@@ -131,5 +131,7 @@ session_start();
 <script type="text/javascript" src="js/dough.js"></script>
 <script type="text/javascript" src="js/save_data.js"></script>
 <link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 </body>
 </html>
