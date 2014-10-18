@@ -4,7 +4,7 @@ session_start();
 <html>
 <head>
 <!-- favicon -->
-<link rel="shortcut icon" href="/favicon.gif" type="image/x-icon">
+<link rel="shortcut icon" href="/logoLowResTrans.png" type="image/x-icon">
 <link rel="icon" href="/favicon.gif" type="image/x-icon">
 <!-- xml version="1.0" encoding="UTF-8" --> 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
@@ -103,18 +103,17 @@ session_start();
 						<span class="input-group-addon">Longitude W</span>
 						<input type="text" id="lon" class="form-control">
 			      			<span class="input-group-btn">
-        					<button class="btn btn-primary" type="button">Add!</button>
+        					<button id="add" class="btn btn-primary" type="button">Add!</button>
       						</span>		
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
 	<!-- Samples -->
 	<div class="col-md-4" style="height:500px; overflow:auto;">
 		<h3>Current Samples</h3>
-		<table class="table table-hover">
+		<table class="samples table table-hover">
 		</table>
 	</div>
 </div>
@@ -129,21 +128,8 @@ session_start();
 <!-- Jquery Cycle-->
 <script type="text/javascript" src="//cdn.jsdelivr.net/cycle/3.0.2/jquery.cycle.all.js"></script>
 <script type="text/javascript" src="js/jquery.cookie.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-  if( $.cookie('sampling_map')==null){
-	$.cookie('sampling_map', '{"name":"unknown","geos":[{"lat":0,"long":0}]}', { expires: 7, path: '/', domain: 'infocosta.pt',secure: false, json: true });
-	
-  }
-  $('.btn btn-primary').on('click',function(){
-    var cookie = JSON.parse($.cookie('sampling_map'));
-    var cookie.geos[cookie.geos.length]={"lat":$('#lat').val(),"long":$('#lon').val()}; 	
-    $.cookie('sampling_map',JSON_stringify(cookie));
-  });	
-});
-
-
-</script>
+<script type="text/javascript" src="js/dough.js"></script>
+<script type="text/javascript" src="js/save_data.js"></script>
 <link rel="stylesheet" type="text/css" href="css/main.css">
 </body>
 </html>
