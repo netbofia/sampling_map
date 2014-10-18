@@ -1,18 +1,22 @@
-<img src="http://www.infocosta.pt/sampling_map/assets/img/header.png" width="400px"/>
+<img src="http://www.infocosta.pt/sampling_map/assets/img/logoLowResTrans.png" style="float:left;" width="100px"/><img style="float:right;"  src="http://www.infocosta.pt/sampling_map/assets/img/header.png" width="400px"/>
 ============
-<img src="http://www.infocosta.pt/sampling_map/assets/img/logoLowResTrans.png" width="100px"/>
+
+Essentially for all the biologists that upon collection samples have to plot maps of where they caught their samples.
+This is a tidy map to save all your collections.
 
 Reads coordinates and outputs pics with samples areas.
 
 Written in HTML5,CSS3.
 
-Uses Leaflet http://leafletjs.com/
+Uses Chartjs (Charts) http://chartjs.org
 
-Uses Bootstrap 3.1.1 http://getbootstrap.com
+Uses Leaflet (Map) http://leafletjs.com
 
-Uses JQuery 1.10.1 http://jquery.com
+Uses Bootstrap (Stylize) 3.1.1 http://getbootstrap.com
 
-Uses Dough https://github.com/nathansearles/Dough
+Uses JQuery 1.10.1 (Manipulate the DOM) http://jquery.com
+
+Uses Dough (Manage cookies) https://github.com/nathansearles/Dough
 
 Batch import of gps locations.
 Add description to points, pics(?), notes, group by coutry, city, type, sample sex, species, what ever floats your boat.
@@ -30,6 +34,7 @@ Can be run locally on your browser. Only dependency is internet for JQuery, Boot
 New features to come:
 ====================
 
+Data server for your data (.dat)
 No flash...!
 Personal area for cloud storage (Data only no pics)
 Add location from your phone to an online area.
