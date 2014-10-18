@@ -1,0 +1,6 @@
+$(document).read(function(){
+
+};
+
+
+
