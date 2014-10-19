@@ -6,8 +6,12 @@ $(document).ready(function(){
     $('table.samples').empty();
     var cookie = $.dough('sampling_map');
     for ( var i in cookie.geos ){
-      cookie.geos[i];
+      console.log(cookie.geos[i]);
       $('table.samples').append('<tr><td><span class="badge">N'+cookie.geos[i].lat+"W"+cookie.geos[i].long+'</span></td></tr>');
+      var myIcon = L.divIcon({className:'addDiv',html:'<canvas id="test" class="point'+i+'"></canvas>'});
+      L.marker([cookie.geos[i].lat,cookie.geos[i].long],{icon: myIcon}).addTo($map);
+      var ctx = $(".point"+i).get(0).getContext("2d");
+      new Chart(ctx).Pie($data, $options);
     };
   }
   $('.btn.btn-primary#add').on('click',function(){
@@ -21,7 +25,7 @@ $(document).ready(function(){
       $('table.samples').append('<tr><td><span class="badge">N'+cookie.geos[i].lat+'W'+cookie.geos[i].long+'</span></td></tr>');
     };
     L.circle([cookie.geos[cookie.geos.length-1].lat,cookie.geos[cookie.geos.length-1].long],3000).addTo($map);
-    var myIcon = L.divIcon({className:'addDiv',html:'<canvas id="test"></canvas>'});
+    var myIcon = L.divIcon({className:'addDiv',html:'<canvas id="test" style="width:100%; height:80%;"></canvas>'});
     L.marker([cookie.geos[cookie.geos.length-1].lat,cookie.geos[cookie.geos.length-1].long],{icon: myIcon}).addTo($map);
     var ctx = $("#test").get(0).getContext("2d");
     new Chart(ctx).Pie($data, $options);

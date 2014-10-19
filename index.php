@@ -151,7 +151,6 @@ session_start();
 <script type="text/javascript" src="//cdn.jsdelivr.net/cycle/3.0.2/jquery.cycle.all.js"></script>
 <script type="text/javascript" src="js/jquery.cookie.js"></script>
 <script type="text/javascript" src="js/dough.js"></script>
-<script type="text/javascript" src="js/save_data.js"></script>
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <script type="text/javascript" src="assets/charts/Chart.min.js"></script>
 <script type="text/javascript" src="js/draw_chart.js"></script>
@@ -159,5 +158,7 @@ session_start();
 <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
 <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 <script type="text/javascript" src="js/mapconfig.js"></script>
+<script type="text/javascript" src="js/save_data.js"></script>
+<script type="text/javascript" src="js/button_actions.js"></script>
 </body>
 </html>
